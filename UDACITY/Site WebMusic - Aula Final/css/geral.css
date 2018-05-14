@@ -1,0 +1,229 @@
+/* Definição de Web Fonts */
+@font-face {
+	font-family: "Space Age";
+	src: url(../fontes/SpaceAge.eot); /* IE9 */
+	/* WOFF: Navegadores  modernos
+	TTF: Safari, Android, iOS...
+	SVG: iOS antigos
+	EOT: Internet Explorer */
+	src: url(../fontes/SpaceAge.woff) format("woff"), 
+		 url(../fontes/SpaceAge.ttf) format("truetype"),
+		 url(../fontes/SpaceAge.svg) format("svg"),
+		 url(../fontes/SpaceAge.eot?#iefix) format("embedded-opentype"); /* IE6-8 */
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: NosiferCaps;
+	src: url(../fontes/NosiferCaps.eot); /* IE9 */
+	src: url(../fontes/NosiferCaps.woff) format("woff"),
+		 url(../fontes/NosiferCaps.ttf) format("truetype"),
+		 url(../fontes/NosiferCaps.svg) format("svg"),
+		 url(../fontes/NosiferCaps.eot?#iefix) format("embedded-opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* CSS Reset */
+p, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+header#topo h1 {
+	font-size: 80px;
+	font-family: "Space Age", Tahoma;
+}
+
+header#topo h2 {
+	font-family: Tahoma;
+	font-size: 14px;
+}
+
+section#destaques h3 {
+	background-color: #300040;
+	color: white;
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	border: solid 1px white;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	
+	-webkit-transform: translate(-50px, 40px) rotate(-45deg);
+	-moz-transform: translate(-50px, 40px) rotate(-45deg);
+	-o-transform: translate(-50px, 40px) rotate(-45deg);
+	-ms-transform: translate(-50px, 40px) rotate(-45deg);
+	transform: translate(-50px, 40px) rotate(-45deg);
+}
+
+section#destaques img {
+	border: 10px solid white;
+	opacity: .8;
+	box-shadow: 0 0 10px 2px black;
+	-webkit-transform: scale(.8);
+	-webkit-transition: .5s;
+	-webkit-filter: grayscale(100%);
+}
+
+section#destaques img:hover {
+	-webkit-transform: scale(1) rotate(5deg);
+	-webkit-transition: .5s;
+	-webkit-filter: grayscale(0%);
+}
+
+article#principal h1 {
+	font-family: NosiferCaps, Tahoma;
+	color: #300040;
+	font-size: 25px;
+	margin-top: 5px;
+	border-bottom: 1px solid;
+	text-shadow: 3px 3px 10px black;
+	padding-left: 5px;
+}
+
+article#principal p {
+	padding: 10px;
+	font-size: 14px;
+	text-align: justify;
+}
+
+aside#shows h1 {
+	padding: 10px;
+	text-align: center;
+	background-image: -webkit-linear-gradient(#300040, black);
+	background-image: -moz-linear-gradient(#300040, black);
+	background-image: -o-linear-gradient(#300040, black);
+	background-image: linear-gradient(#300040, black);
+	color: white;
+	border-radius: 10px 10px 0 0;
+}
+
+aside#shows h2 {
+	color: #300040;
+	font-size: 18px;
+	padding: 5px;
+	font-family: Verdana;
+}
+
+aside#shows h3 {
+	background-color: white;
+	padding: 5px;
+	font-size: 14px;
+	box-shadow: black 0 2px 2px;
+}
+
+aside#shows p {
+	padding: 5px;
+	font-size: 12px;
+}
+
+aside#shows hr {
+	width: 70%;
+	height: 2px;
+	background-color: #300040;
+	border: none;
+	box-shadow: #300040 0 0 5px;
+}
+
+article#principal h2 {
+	font-family: NosiferCaps, Verdana, Geneva;
+	color: red;
+	padding: 5px;
+	font-size: 24px;
+	border-bottom: 1px solid #300040;
+	text-shadow: 5px 5px 10px black;
+}
+
+article#principal h3 {
+	font-size: 16px;
+	padding: 5px;
+	color: red;
+	border-left: 10px solid red;
+	margin-left: 5px;
+}
+
+article#principal figure {
+	text-align: center;
+}
+
+article#principal figure img {
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px black;
+}
+
+article#principal figcaption {
+	font-family: Arial, Verdana;
+	font-size: 12px;
+	font-weight: bold;
+	margin-top: 2px;
+}
+
+aside#videos h1 {
+	padding: 5px;
+	font-size: 18px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+aside#videos h2 {
+	padding: 5px;
+	background-color: white;
+	color: black;
+	font-size: 14px;
+}
+
+aside#videos p {
+	padding: 5px;
+	color: #ff0;
+	font-size: 14px;
+	text-align: center;
+}
+
+article#principal table {
+	width: 60%;
+	margin: auto;
+	font-size: 14px;
+	box-shadow: 0 0 10px #300040;
+	border-collapse: collapse; /*Elimina espaços entre celulas*/
+}
+
+article#principal caption {
+	font-size: 18px;
+	font-weight: bold;
+	color: #300040;
+}
+
+article#principal th {
+	background-color: #300040;
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+article#principal td {
+	text-align: center;
+}
+
+article#principal tr:nth-child(odd) {
+	background-color: #ccc;
+}
+
+article#principal tr:last-child {
+	color: red;
+}
+
+
+
+
+
+
+
+
+

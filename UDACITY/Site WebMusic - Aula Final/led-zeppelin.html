@@ -1,0 +1,132 @@
+﻿<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>WebMusic - Led Zeppelin</title>
+<link href="css/layout.css" rel="stylesheet">
+<link href="css/links.css" rel="stylesheet">
+<link href="css/geral.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+article#principal {
+	width: 100%;
+	
+}
+
+div#area {
+	width:320px;
+	height:240px;
+	margin: auto;
+}
+
+canvas {
+	background-color: black;
+	border-radius: 10px;	
+}
+
+</style>
+<script>
+window.onload = function() {
+	// Obter informaçoes do elementos canvas pelo seu ID
+	var tela = document.getElementById('tela');
+	
+	// Criar um contexto para desenho no canvas (sempre 2d)
+	var contexto = tela.getContext('2d');
+	
+	// Circulo de cima
+	contexto.beginPath();
+	contexto.fillStyle = 'red';
+	contexto.lineWidth = 3;
+	contexto.strokeStyle = 'white';
+	contexto.arc(160,80,70,0,2 * Math.PI,true);
+	contexto.fill();
+	contexto.stroke();	
+
+
+	
+	// Circulo de cima
+	contexto.beginPath();
+	contexto.fillStyle = 'red';
+	contexto.lineWidth = 3;
+	contexto.strokeStyle = 'white';
+	contexto.arc(210,150,70,0,2 * Math.PI,true);
+	contexto.fill();
+	contexto.stroke();	
+
+
+
+	// Circulo de cima
+	contexto.beginPath();
+	contexto.fillStyle = 'red';
+	contexto.lineWidth = 3;
+	contexto.strokeStyle = 'white';
+	contexto.arc(110,150,70,0,2 * Math.PI,true);
+	contexto.fill();
+	contexto.stroke();	
+}
+
+</script>
+
+</head>
+<body>
+<div id="container">
+	
+	<header id="topo">
+		<img src="images/logo-webmusic.png" alt="WebMusic">
+		<hgroup>
+			<h1>WebMusic</h1>
+			<h2>Referência em Classic Rock, Heavy Metal e Rock Progressivo</h2>
+		</hgroup>
+		<section>
+			<form id="formBusca" name="formBusca" action="#" method="get">
+				<label for="campoBusca">Buscar por: </label>
+				<input type="search" id="campoBusca" name="campoBusca" placeholder="Bandas...">
+				<input type="submit" id="pesquisar" name="pesquisar" value="Pesquisar">
+			</form>
+		</section>
+	</header>
+	
+	<nav id="navbar">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="classic-rock.html">Classic Rock</a></li>
+			<li><a href="heavy-metal.html">Heavy Metal</a></li>
+			<li><a href="rock-progressivo.html">Rock Progressivo</a></li>
+			<li><a href="contato.html">Contato</a></li>
+		</ul>
+	</nav>
+	<section id="conteudo">
+		<article id="principal">
+			<h1>Led Zeppelin</h1>
+			<h2>Simbologia - John Bonhan</h2>
+			<p>O símbolo do baterista são os 3 círculos interligados, que representam a trindade de mãe, pai e filho. Também pode ser interpretado como uma bateria, vista de cima. Além disso, o símbolo aparecia na cerveja favorita de Bonham, a Ballantine.</p>
+			
+            <div id="area">
+            <canvas id="tela" width="320" height="240"></canvas>  
+                         
+            </div>
+		
+        </article>
+	</section>
+	
+	<footer id="rodape">
+		<section id="menu-inferior">
+		  <ul>
+		    <li><a href="institucional.html">Institucional</a></li>
+		    <li><a href="mapa-do-site.html">Mapa do Site</a></li>
+		    <li><a href="localizacao.html">Localização</a></li>
+		    <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+	      </ul>
+		</section>
+		<section id="midias-sociais"> <a href="http://www.facebook.com" target="_blank"><img src="images/facebook-icone.png" width="30" height="30" alt="Facebook"></a>
+          <a href="http://www.youtube.com" target="_blank"><img src="images/youtube-icone.png" width="30" height="30" alt="Youtube"></a>
+          <a href="http://www.twitter.com" target="_blank"><img src="images/twitter-icone.png" width="30" height="30" alt="Twitter"></a>
+       	</section>
+	</footer>
+	
+</div>
+
+</body>
+</html>

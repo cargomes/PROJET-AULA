@@ -1,0 +1,57 @@
+/* Parametros da animação */
+@-webkit-keyframes moverGirarCapa {
+	from { 
+		-webkit-transform: translateX(0) rotate(0deg);
+	}
+	
+	to {
+		-webkit-transform: translateX(480px) rotate(360deg);
+	}
+}
+
+@-moz-keyframes moverGirarCapa {
+	from { 
+		-webkit-transform: translateX(0) rotate(0deg);
+	}
+	
+	to {
+		-webkit-transform: translateX(480px) rotate(360deg);
+	}
+}
+
+@-webkit-keyframes girarTexto {
+	from { -webkit-transform: rotateX(0); }
+	to { -webkit-transform: rotateX(360deg);}
+}
+
+/* Estrutura do banner */
+div#bannerDarkSide {
+	width: 600px;
+	height: 150px;
+	margin: auto;
+	border: solid black 1px;
+	position: relative;
+	overflow: hidden;
+}
+
+div#bannerDarkSide img {
+	-webkit-animation: moverGirarCapa 1s alternate infinite ease-in-out;
+	box-shadow: black 2px 2px 40px;
+}
+
+div#bannerDarkSide p {
+	-webkit-animation: girarTexto 4s alternate infinite;
+	font-size: 40px;
+	text-align: center;
+	text-shadow: black 0 0 30px;
+	color: #ff0;
+	font-weight: bold;
+	font-family: Tahoma;
+	position: absolute;
+	z-index: 10;
+	line-height: 150px; 
+}
+
+
+
+

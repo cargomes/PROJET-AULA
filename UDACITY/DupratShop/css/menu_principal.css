@@ -1,0 +1,155 @@
+
+
+/* menu principal
+--------------------------------------------------------------*/
+.menu {
+    width:783px;
+    margin:0;
+    position:absolute;
+    display: inline-block;
+    z-index: 10;
+}
+
+
+.nav {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    line-height: 22px;
+}
+
+.nav>li {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.nav>li>a {
+    display: block;
+    position: relative;
+    padding:25px 14.5px;
+    color: #000000;
+    font-size:18px;
+    font-family: 'source_sans_probold';
+    text-transform: uppercase;
+    text-decoration: none;
+	border-right:#f2f2f2 solid 1px;
+    -webkit-transition: color .3s ease-in;
+    -moz-transition: color .3s ease-in;
+    -o-transition: color .3s ease-in;
+    -ms-transition: color .3s ease-in;
+}
+
+/*Hack para Chrome e Safari*/
+@media screen and (-webkit-min-device-pixel-ratio:0){
+      .nav>li>a {
+           padding:25px 15px;
+      }
+}
+
+/*Hack para Firefox*/
+@-moz-document url-prefix(){
+      .nav>li>a {
+           padding:25px 15px;
+      }
+}
+
+.nav>li>a:hover, 
+.nav>li:hover>a, 
+.nav>li>a.active
+{   color:#522635;
+    background:url(../images/bullet_menu.png) 50% 50px no-repeat; 
+    -webkit-transition: color .3s ease-in;
+    -moz-transition: color .3s ease-in;
+    -o-transition: color .3s ease-in;
+    -ms-transition: color .3s ease-in; }
+
+
+
+.nav>.dropdown>a { padding: 2px 0px;}
+
+.dropdown>a::after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 10px;
+    width: 7px;
+    height: 7px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+<!--.dropdown>a:hover::after, .dropdown:hover>a::after {
+    border-color:;
+}
+
+-->
+
+.nav ul {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+}
+
+.nav ul li {
+    position: absolute;
+    top: -9999px;
+    height: 0px;
+    display: block;
+    margin: 0 0 1px 0;
+    padding: 0;
+    -webkit-transition: height .2s ease-in;
+    -moz-transition: height .2s ease-in;
+    -o-transition: height .2s ease-in;
+    -ms-transition: height .2s ease-in;
+}
+
+/* submenu largura...*/
+.dropdown:hover>ul>li {height: 30px; position: relative; top: auto;}
+
+.nav ul li a {
+    width: 230px;
+    padding: 6px 15px 2px 15px;
+    display: block;
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'source_sans_prosemibold';
+    text-transform: uppercase;
+    background: #ec0b8d;
+    -webkit-transition: color .3s ease-in, background .3s ease-in;
+    -moz-transition: color .3s ease-in, background .3s ease-in;
+    -o-transition: color .3s ease-in, background .3s ease-in;
+    -ms-transition: color .3s ease-in, background .3s ease-in;
+}
+
+/* hover submenu cores bg e txt*/
+.nav ul li:hover>a, .nav ul li a:hover {color: #fff; background: #dc0b8d;}
+
+.nav ul .dropdown:hover ul {left: 160px; top: 0px;}
+
+.nav ul .dropdown a::after {
+    width: 6px;
+    height: 6px;
+    border-bottom: 0;
+    border-right: 1px solid #fff;
+    border-top: 1px solid #fff;
+    top: 12px;
+}
+
+.nav ul 
+.dropdown:hover>a::after, 
+.nav ul 
+.dropdown>a:hover::after {
+    border-right: 1px solid #f8de31;
+    border-top: 1px solid #f8de31;
+}
+

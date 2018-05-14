@@ -1,0 +1,62 @@
+/* "Limpando" a lista ul */
+nav#navbar ul, section#menu-inferior ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/* Colocando os itens da lista na horizontal */
+nav#navbar ul li, section#menu-inferior ul li {
+	display: inline;
+}
+
+/* Estilizando os links */
+nav#navbar ul li a {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	line-height: 50px;
+	padding: 10px;
+	margin: 2px 20px;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-o-transition: 1s;
+	-ms-transition: 1s;
+	transition: 1s;
+}
+
+/* Estilizando o estado "over" do link */
+nav#navbar ul li a:hover {
+	background-color: white;
+	color: black;
+	border-radius: 10px;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-o-transition: 1s;
+	-ms-transition: 1s;
+	transition: 1s;
+}
+
+
+section#menu-inferior ul li a {
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+	line-height: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: inline-block;
+}
+
+section#menu-inferior ul li a:hover {
+	color: white;
+	background-color: #300040;
+}
+
+section#midias-sociais a img {
+	margin-top: 5px;
+}
+
+
+

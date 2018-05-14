@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Rascunho...</title>
+<style>
+/* Configura��es da anima��o */
+@-webkit-keyframes animar {
+	0% {
+		-webkit-transform: translateY(0) rotate(0deg);
+		box-shadow: black 0 0 5px 10px;
+	}
+	
+	50% { box-shadow: blue 0 0 10px 50px; }
+	
+	100%{
+		-webkit-transform: translateY(300px) rotate(360deg);
+		box-shadow: black 0 0 5px 10px;
+	}
+}
+div {
+	-webkit-animation: animar 2s infinite alternate ease-in-out;
+	-moz-animation: animar 2s infinite alternate ease-in-out;
+	-o-animation: animar 2s infinite alternate ease-in-out;
+	-ms-animation: animar 2s infinite alternate ease-in-out;
+	animation: animar 2s infinite alternate ease-in-out;
+	
+	/*
+	-webkit-animation-name: animar;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-timing-function: ease-in-out;
+	*/
+	
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	margin: 5px auto;	
+}
+
+p:before { content: "meu nome é";}
+
+</style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

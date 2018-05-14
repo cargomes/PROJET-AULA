@@ -1,0 +1,223 @@
+﻿<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>WebMusic - Contato</title>
+<link href="css/layout.css" rel="stylesheet">
+<link href="css/links.css" rel="stylesheet">
+<link href="css/geral.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+article#principal {
+	width: 100%;
+}
+
+form#form-contato {
+	width:97%;
+	margin:auto;
+}
+
+fieldset {
+	padding:3px;
+	margin:10px 0;
+}
+
+legend {
+	font-weight:bold;
+	padding:5px;
+	background-color:#CCC;
+}
+
+form#form-contato input {
+	border: solid 1px #300040;
+	border-radius:3px;
+	box-shadow:rgba(0,0,0,.3) 2px 2px 10px 1px;
+	height:30px;
+}
+
+
+form#form-contato input:focus {
+	outline-color: #300040;
+	outline-style: dotted;
+	outline-width: 2px;
+	outline-offset: 2px;
+}
+
+form#form-contato input:invalid {
+	border:#F00 2px solid;
+}
+
+form#form-contato input:invalid + span:after {
+	content: "\00d7"; /*Cod. unicode para s'imbolo de um x*/
+	
+}
+
+
+form#form-contato input:valid {
+	border:#090 2px solid;
+}
+
+form#form-contato input:valid + span:after {
+	content: "\2713"; /*Cod. unicode para s'imbolo de um check*/
+	
+}
+
+#form-contato input[type=submit], #form-contato input[type=reset] {
+	border: 2px solid #000;
+	background-image: -webkit-linear-gradient(#300040,black);
+	background-image: -moz-linear-gradient(#300040,black);
+	background-image: -o-linear-gradient(#300040,black);
+	background-color:red;
+	border-radius: 5px;
+	padding:5px;
+	font-weight:bold;
+	color:white;
+}
+#form-contato label {
+	display: block;
+	width: 250px;
+	float: left;
+	border-bottom: 1px solid #300040;
+	font-size: 14px;
+	font-weight:bold;
+	word-wrap: break-word;
+}
+</style>
+</head>
+<body>
+<div id="container">
+	
+	<header id="topo">
+		<img src="images/logo-webmusic.png" alt="WebMusic">
+		<hgroup>
+			<h1>WebMusic</h1>
+			<h2>Referência em Classic Rock, Heavy Metal e Rock Progressivo</h2>
+		</hgroup>
+		<section>
+			<form id="formBusca" name="formBusca" action="#" method="get">
+				<label for="campoBusca">Buscar por: </label>
+				<input type="search" id="campoBusca" name="campoBusca" placeholder="Bandas...">
+				<input type="submit" id="pesquisar" name="pesquisar" value="Pesquisar">
+			</form>
+		</section>
+	</header>
+	
+	<nav id="navbar">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="classic-rock.html">Classic Rock</a></li>
+			<li><a href="heavy-metal.html">Heavy Metal</a></li>
+			<li><a href="rock-progressivo.html">Rock Progressivo</a></li>
+			<li><a href="contato.html">Contato</a></li>
+		</ul>
+	</nav>
+	<section id="conteudo">
+		<article id="principal">
+			<h1>Contato</h1>
+			<p>Utilize o formulário abaixo para entrar em contato conosco:</p>
+      <form id="form-contato" oninput="saidaNota.value = nota.valueAsNumber" action="enviar_contato.php" method="post">
+      <fieldset>
+      	<legend>Dados pessoais</legend>
+          <p>
+              <label for="nome">Nome:</label>
+              <input name="nome" type="text" required id="nome" size="50"><span></span>
+          </p>
+          <p><!-- Caixa rotativa -->
+              <label for="idade">Idade:</label>
+	          <input type="number" name="idade" id="idade" min="14" max="100" step="1">
+          </p>
+          <p>
+              <label for="data-nasc">Data de nascimento:</label>
+              <input name="data-nasc" type="date" id="data-nasc">
+          </p>
+      </fieldset>
+      
+      <fieldset>
+      	<legend>Contato</legend>    
+          <p>
+              <label for="email">E-mail:</label>
+	          <input name="email" type="email" required id="email" size="50">
+          </p>
+          <p>
+              <label for="telefone">Telefone:</label>
+              <input name="telefone" type="tel"
+                   required class="campos" id="telefone"
+                  placeholder="XX-XXXX-XXXX">
+          </p> 
+          <p>
+              <label for="celular">Celular:</label>
+              <input name="celular" type="tel"
+                   required class="campos" id="celular"
+                   placeholder="XX-XXXXX-XXXX">
+          </p> 
+          <p>
+              <label for="cep">CEP:</label>
+              <input name="cep" type="text"
+                   required class="campos" id="cep" placeholder="XXXXX-XXX"
+                   pattern="\d{5}-?\d{3}" size="20">
+          </p>           
+          <p>
+            <label for="site">Site/Blog:</label>
+	        <input name="site" type="url" class="campos" id="site" placeholder="http://" size="50">
+          </p>
+       </fieldset>
+       
+       
+       <fieldset>
+      	<legend>Sobre o WebMusic</legend>   
+          <p><!-- Controle deslizante -->
+              <label for="nota">Dê uma nota para o site:</label>
+              <input type="range" name="nota" id="nota" min="0" max="10" step="1" value="0">
+              <output for="nota" name="saidaNota"></output>
+          </p>
+          <p>
+              <label for="horario">Horas que passa no site:</label>
+              <input type="time" name="horario" id="horario">
+          </p>
+          <p>
+              <label for="area">Área que mais gosta:</label>
+                  <input type="text" name="area" id="area" list="listaAreas" required>
+                  <datalist id="listaAreas">
+                  <select id="listaAlternativa" name="listaAlternativa">
+                  	<option value="Classic Rock">Classic Rock</option>
+                    <option value="Heavy Metal">Heavy Metal</option>
+                    <option value="Rock Progressivo">Rock Progressivo</option>
+                    <option value="Bandas em destaque">Bandas em destaque</option>  
+                  </select>
+                  </datalist>
+          </p>          
+          <p>
+              <label for="cor">Sugira uma cor para o site:</label>
+              <input type="color" name="cor" id="cor"> Exemplo: #FFCC00
+          </p>          
+       </fieldset>   
+          
+          <p>
+          	<input type="submit" id="enviar" name="enviar" value="Enviar dados">
+            <input type="reset" id="limpar" name="limpar" value="Limpar campos">
+          </p>
+          
+      </form>           
+      </article>
+	</section>
+	
+	<footer id="rodape">
+		<section id="menu-inferior">
+			<ul>
+				<li><a href="#">Institucional</a></li>
+                <li><a href="#">Mapa do Site</a></li>
+                <li><a href="#">Localização</a></li>
+                <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+			</ul>
+		</section>
+		<section id="midias-sociais"> <a href="http://www.facebook.com" target="_blank"><img src="images/facebook-icone.png" width="30" height="30" alt="Facebook"></a>
+          <a href="http://www.youtube.com" target="_blank"><img src="images/youtube-icone.png" width="30" height="30" alt="Youtube"></a>
+          <a href="http://www.twitter.com" target="_blank"><img src="images/twitter-icone.png" width="30" height="30" alt="Twitter"></a>
+       	</section>
+	</footer>
+	
+</div>
+</body>
+</html>

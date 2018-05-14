@@ -1,0 +1,530 @@
+/* desenv 2014 hkl */
+
+/* -------------------
+Auxilio
+-----------------------*/
+a {color: #000;text-decoration:none;}
+a:hover {text-decoration: none;}
+::-webkit-input-placeholder {color: #000;}
+::-moz-placeholder {color: #000;} /* firefox 19+ */
+:-ms-input-placeholder {color: #000;} /* ie */
+input:-moz-placeholder {color: #000;}
+button:focus {outline: none;}
+input:focus {outline: none;}
+select:focus {outline: none;}
+form * {outline: none;}
+img { border: none;}
+a img { border: 0;}
+* {margin: 0;padding: 0;}
+
+/* -------------------
+Base Css
+-----------------------*/
+body {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    background: url(../images/bg.jpg);
+    font-family: 'source_sans_proregular';
+}
+
+#container {width: 100%;margin: 0 auto;background: url(../images/bg.jpg);}
+.layout {width: 1000px;position: relative;margin: auto;}
+
+/* -------------------
+barra topo 
+-----------------------*/
+.barra_topo {
+    width: 100%;
+    height: 72px;
+    position: fixed;
+    background: url(../images/menu.jpg) top center no-repeat;
+    background-position: top center;
+    border-bottom: #f2f2f2 solid 1px;
+    z-index: 11;
+}
+
+.lojista {
+    width: 167px;
+    padding: 25px 0 0 50px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: 'source_sans_probold';
+    float: right;
+}
+.lojista a {color: #ffffff;text-decoration: none;}
+.lojista a:hover {color: #ccc;text-decoration: underline;}
+
+
+/* -------------------
+Area Banner...
+-----------------------*/
+#banner {
+    width: 1280px;
+    height: 730px;
+    margin: 0 auto;
+    top: 72px;
+    position: relative;
+}
+
+
+.logo {
+    width: 200px;
+    height: 174px;
+    position: absolute;
+    margin: 0px 0 0 140px;
+    z-index: 10;
+}
+
+.infos {
+    width: 1000px;
+    height: 293px;
+    position: absolute;
+    margin: 437px 0 0 140px;
+    z-index: 10;
+}
+
+.infos_lojas {float: left;margin-right: 3px;}
+.infos_hora { float: left;width: 481px;}
+
+.infos_redes {
+    float: left;
+    margin-top: 2px;
+    width: 481px;
+    height: 144px;
+    background: url(../images/redes.png);
+}
+
+.infos_redes ul { padding: 0px;margin: 0px;list-style: none;}
+
+.infos_redes ul li a {
+    display: inline-block;
+    width: 481px;
+    height: 32px;
+    padding: 17px 0 0px 0px;
+    text-decoration: none;
+    font-size: 0px;
+    -webkit-transition: all 0.25s linear 0s;
+    -moz-transition: all 0.25s linear 0s;
+    -ms-transition: all 0.25s linear 0s;
+    -o-transition: all 0.25s linear 0s;
+    transition: all 0.25s linear 0s;
+}
+
+.infos_redes ul li a:hover {
+    background: rgba(250,250,250,0.15);
+    -webkit-transition: all 0.25s linear 0s;
+    -moz-transition: all 0.25s linear 0s;
+    -ms-transition: all 0.25s linear 0s;
+    -o-transition: all 0.25s linear 0s;
+    transition: all 0.25s linear 0s;
+}
+
+/* -------------------
+Area newsletter 
+-----------------------*/
+
+#newsletter {
+    width: 1000px;
+    height: 85px;
+    margin: 0 auto;
+    margin-top: 74px;
+    position: relative;
+    background: #ececec url(../images/newsletter.png) 10px center no-repeat;
+}
+
+#newsletter .texto {
+    width: auto;
+    padding: 20px 20px 0 125px;
+    font-family: 'source_sans_probold';
+    color: #6c6c6c;
+    font-size: 34px;
+    float: left;
+}
+
+#newsletter .campo {
+    width: 480px;
+    height: 14px;
+    margin: 23px 0 0 0;
+    padding: 13px 20px;
+    font-family: 'source_sans_prolight';
+    font-size: 18px;
+    color: #c9c9c9;
+    background: #ffffff;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    float: left;
+}
+
+#newsletter .bot_cadastrar {
+    width: 136px;
+    height: 40px;
+    margin: 23px 20px 0 0;
+    border-radius: 6px;
+    border: none;
+    background: #d2d2d2;
+    color: #ffffff;
+    font-family: 'source_sans_prosemibold';
+    text-transform: uppercase;
+    font-size: 18px;
+    float: right;
+    display: block;
+    cursor: pointer;
+    cursor/*\**/: hand\9;
+}
+
+/* -------------------
+Area Conteudo Home
+-----------------------*/
+
+#content {
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 2px;
+    padding-bottom: 45px;
+    overflow: hidden;
+    position: relative;
+    background: #ffffff;
+    font-family: 'source_sans_prolight';
+    font-size: 15px;
+    color: #000;
+}
+
+#content h2 {
+    font-family: 'source_sans_prosemibold';
+    font-size: 19px;
+    color: #000;
+    margin: 0;
+}
+
+#content section {
+    width: 332px;
+    padding: 0;
+    margin: 0 1.3px 0 0;
+    float: left;
+}
+
+#content section article {
+    width: 245px;
+    height: 128px;
+    padding: 20px 20px 0 67px;
+    margin: 0;
+}
+
+.bg_eventos {background: url(../images/bg_eventos.jpg) center center no-repeat;}
+.bg_estaciona {background: url(../images/bg_estaciona.jpg) center center no-repeat;}
+.bg_chegar {background: url(../images/bg_chegar.jpg) center center no-repeat;}
+
+
+/* -------------------
+Area Rodape Home
+-----------------------*/
+footer {
+    width: 1280px;
+    height: 330px;
+    margin: 0 auto;
+    position: relative;
+    border-top: #dfdfdf solid 1px;
+    background: #e2e4e3 url(../images/mapa.jpg) center center no-repeat;
+    clear: both;
+}
+
+.texto_mapa {
+    padding: 180px 0 0 0;
+    font-family: 'source_sans_prolight';
+    font-size: 28px;
+    font-style: italic;
+    text-align: center;
+}
+
+.texto_mapa a { color: #000000;text-decoration: none;}
+.texto_mapa a:hover {color: #522635;}
+.icon_mapa {position: absolute;left: 50%;top: 85px;}
+.texto_mapa span {font-family: 'source_sans_probold';}
+
+
+/* -------------------
+Area copyright
+-----------------------*/
+.copyright {
+    width: 1280px;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    margin: 0 auto;
+    position: relative;
+    background: #231f20;
+    font-family: 'source_sans_prolight';
+    color: #ffffff;
+    font-size: 12px;
+    text-align: left;
+    clear: both;
+}
+
+.copyright a {color: #fff;text-decoration: none;}
+.copyright a:hover {color: #fff;}
+.copyright span { float: right;}
+
+
+
+/* -------------------
+content_02 / Página Internas
+-----------------------*/ 
+
+#content_02 {
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: -365px;
+    padding-bottom: 45px;
+    overflow: hidden;
+    position: relative;
+    background: #ffffff;
+    font-family: 'source_sans_prolight';
+    font-size: 15px;
+    color: #000;
+}
+
+/* ------- box 01 ------*/ 
+#content_02 .box01 {
+    width: 590px;
+    padding: 0 20px 30px  20px;
+    margin: 40px 0 0 0;
+    border-right: dotted  #000000 1px;
+    float: left;
+}
+
+#content_02 .box01 p {margin: 15px 0;}
+#content_02 .box01 p span {display: block;}
+
+#content_02 h1 {
+    font-family: 'source_sans_probold';
+    font-size: 60px;
+    margin: 0 0 50px 0;
+    text-transform: uppercase;
+    color: #777;
+    text-align: center;
+}
+
+#content_02 h1 span {display: block;line-height: 25px;}
+
+
+/* ------- box 02 ------*/ 
+#content_02 .box02 {
+    width: 329px;
+    padding: 0 20px;
+    margin: 40px 0 0 0;
+    float: right;
+}
+
+#content_02 h2 {
+    font-family: 'source_sans_prosemibold';
+    font-size: 19px;
+    color: #000;
+    margin: 0;
+}
+
+#content_02 section article {
+    width: 245px;
+    height: 128px;
+    padding: 20px 20px 0 67px;
+    margin: 0 0 20px 0;
+}
+
+
+
+/* -------------------
+content_02 / Página Internas / page contato 
+-----------------------*/
+#content_02 .campo {
+    width: 540px;
+    height: 14px;
+    margin: 23px 0 0 0;
+    padding: 13px 20px;
+    font-family: 'source_sans_prolight';
+    font-size: 18px;
+    color: #000;
+    background: #efefef;
+    border-radius: 6px;
+    outline: none;
+    border: solid 1px #e4e4e4;
+    float: left;
+}
+
+.campo_textarea {
+    width: 555px;
+    height: 160px;
+    font-family: 'source_sans_prolight';
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 12px 12px;
+    color: #324a6e;
+    background: #efefef;
+    border: solid 1px #e4e4e4;
+    line-height: 1.6;
+    margin-top: 22px;
+}
+
+#content_02 .bot_enviar {
+    width: 136px;
+    height: 40px;
+    margin: 10px 8px 0 0;
+    border-radius: 6px;
+    border: none;
+    background: #000;
+    color: #ffffff;
+    font-family: 'source_sans_prosemibold';
+    text-transform: uppercase;
+    font-size: 18px;
+    float: right;
+    display: block;
+    cursor: pointer;
+    cursor/*\**/: hand\9;
+}
+
+
+/* -------------------
+Página Internas / Menu page servicos
+-----------------------*/
+.box_menu {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.menu_servicos {
+    width: auto;
+    margin-right: 100px;
+    line-height: 20px;
+    font-size: 17px;
+    font-family: 'source_sans_prolight';
+    position: relative;
+    float: left;
+}
+
+.menu_servicos ul {padding: 0px; margin: 0px;list-style: none;}
+
+.menu_servicos ul li a {
+    display: inline-block;
+    color: #404040;
+    background: url(../images/bg_bullet01.png) center left no-repeat;
+    padding: 8px 0 8px 15px;
+    text-decoration: none;
+}
+
+.menu_servicos ul li a:hover {color: #f89b15;background: url(../images/bg_bullet.png) center left no-repeat;}
+.menu_servicos ul li a.active {color: #f89b15;background: url(../images/bg_bullet.png) center left no-repeat;}
+
+
+/* -------------------
+Página Internas / page lojas
+-----------------------*/
+.buscar_lojas {width: 270px;margin: 20px 0 35px 0;position: relative;float: left;}
+
+.buscar_lojas input {
+    width: 240px;
+    height: 18px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-family: 'source_sans_prolight';
+    font-size: 16px;
+    color: #000;
+    background: #efefef;
+    border: solid 1px #e4e4e4;
+    line-height: 1.6;
+    position: relative;
+    float: left;
+}
+
+.buscar_lojas  .botao {
+    width: 30px;
+    height: 37px;
+    left: 227px;
+    position: absolute;
+    background: no-repeat center center url(../images/lupa.png);
+    border: none;
+    cursor: pointer;
+    cursor/*\**/: hand\9;
+}
+
+.buscar_segmento {
+    width: 270px;
+    margin: 20px 0 35px 0;
+    position: relative;
+    float: right;
+}
+
+.buscar_segmento select {
+    width: 268px;
+    height: 40px;
+    padding: 8px 12px;
+    border: solid 1px #e4e4e4;
+    background: #efefef url(../images/icon_segmento.png) no-repeat right;
+    border-radius: 6px;
+    font-family: 'source_sans_prolight';
+    font-size: 16px;
+    -webkit-appearance: none;
+    cursor: pointer;
+    cursor/*\**/: hand\9;
+}
+
+.ordem_alfabetica {
+    width: auto;
+    margin: 0 0 35px 0;
+    display: inline-block;
+    padding-left: 0;
+    line-height: 20px;
+    list-style: none;
+	font-family: 'source_sans_prolight';
+}
+
+.ordem_alfabetica ul {
+    width: auto;
+    float: left !important;
+    margin-right: 60px;
+    padding-left: 0;
+    list-style: none;
+	
+}
+
+.ordem_alfabetica ul li a {font-size: 15px;letter-spacing: 1.8px;}
+/*letras*/  
+.ordem_alfabetica a {text-transform: uppercase;letter-spacing: 6.8px;font-size: 24px;}
+.ordem_alfabetica a:hover {text-decoration: none;color: #999;}
+.ordem_alfabetica a.active {font-family: 'source_sans_probold';text-decoration: none;}
+
+/* -------------------
+Footer Página Internas
+-----------------------*/
+.footer_interna {
+    width: 1280px;
+    height: 183px;
+    padding-top: 45px;
+    margin: 0 auto;
+    position: relative;
+    border-top: #dfdfdf solid 1px;
+    background: #e2e4e3 url(../images/bg_rodape_int.jpg) center center no-repeat;
+    clear: both;
+}
+
+.footer_interna section {
+    width: 247px;
+    padding: 0 15px 0 70px;
+    margin: 0 1.3px 0 0;
+    font-size: 15px;
+    float: left;
+}
+
+.footer_interna section h2 {font-family: 'source_sans_prosemibold';font-size: 20px;color: #fff;}
+.footer_interna section span { color: #fff; display: block;}
+.bg_localizacao { background: url(../images/icon_mapa_02.png) top left no-repeat;}
+.bg_horarios {
+    width: 150px !important;
+    margin: 0 41px 0 56px !important;
+    background: url(../images/icon_hora.png) top left no-repeat;
+}
+
+.bg_estaciona02 {background: url(../images/icon_carro.png) top left no-repeat;}
